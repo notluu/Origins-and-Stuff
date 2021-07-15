@@ -1,0 +1,42 @@
+{	
+	"name": "Bee",
+	"description": "You and the bees are on friendly terms, you no longer anger bees",
+	"team": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "team add BeeLike",
+			"permission_level": 2
+		},
+		"entity_action_added": {
+			"type": "origins:execute_command",
+			"command": "team add BeeLike",
+			"permission_level": 2
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "team leave @s",
+			"permission_level": 2
+		},
+		"entity_action_removed": {
+			"type": "origins:execute_command",
+			"command": "team leave @s",
+			"permission_level": 2
+		}
+	},
+
+	"bee_intergration": {
+		"type": "origins:action_over_time",
+		"interval": 100,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "team join BeeLike @e[type=bee]",
+					"permission_level": 2
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+    "powers": [
+		"origins:water_vulnerability",
+		"origins:arthropod",
+		"origins:slow_falling",
+		"notluu:beelike",
+		"notluu:flight"
+    ],
+    "icon": "minecraft:honeycomb",
+    "order": 12,
+    "impact": 3,
+	"name": "Bee",
+	"description": "A bee origin, what else?"
+}
